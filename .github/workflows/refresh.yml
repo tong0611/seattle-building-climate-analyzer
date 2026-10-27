@@ -1,0 +1,27 @@
+name: Weekly data refresh
+
+# Rebuilds everything from the city's latest CSV. Fails loudly if the city changes the
+# schema or the data breaks an assumption (a data-contract check), and publishes the
+# regenerated reports as a build artifact.
+on:
+  schedule:
+    - cron: "0 14 * * 1"  # Mondays 14:00 UTC
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+      - run: python -m beps_prioritizer run --download
+      - run: pytest -q
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reports
+          path: |
+            reports/
+            data/processed/pipeline_run.json

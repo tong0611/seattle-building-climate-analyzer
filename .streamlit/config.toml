@@ -1,0 +1,11 @@
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+primaryColor = "#2a78d6"
+
+[client]
+toolbarMode = "viewer"  # hide developer controls such as the Deploy button
