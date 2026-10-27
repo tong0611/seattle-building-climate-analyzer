@@ -436,13 +436,14 @@ If `beps` reports `No module named 'beps_prioritizer'` on macOS with Python 3.13
 the editable-install file was marked hidden; use the `make` targets (which set
 `PYTHONPATH=src`) or run `PYTHONPATH=src .venv/bin/python -m beps_prioritizer <step>`.
 
-### Deploying the app (Streamlit Community Cloud, free)
+### Running the app
 
-1. Push this repository to GitHub.
-2. At share.streamlit.io choose **New app**, pick the repository, set the main file to
-   `app/streamlit_app.py`, and choose Python 3.12 under advanced settings.
-3. On first start the app downloads the city data and builds everything (about 30
-   seconds); later visits use the cached data.
+```bash
+.venv/bin/streamlit run app/streamlit_app.py    # same as `make app`
+```
+
+The app opens at http://localhost:8501. If the data has not been built yet, it builds
+it on first start.
 
 ### Performance (measured locally)
 
