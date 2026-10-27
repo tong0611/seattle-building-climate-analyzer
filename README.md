@@ -21,13 +21,12 @@ underlying data can be trusted.
 7. [How we know the results are reliable](#how-we-know-the-results-are-reliable)
 8. [Data sources](#data-sources)
 9. [Regulatory reference](#regulatory-reference)
-10. [Limitations](#limitations)
-11. [Plan and status](#plan-and-status)
-12. [Getting started](#getting-started)
-13. [Project structure](#project-structure)
-14. [Design decisions](#design-decisions)
-15. [Glossary](#glossary)
-16. [License](#license)
+10. [Plan and status](#plan-and-status)
+11. [Getting started](#getting-started)
+12. [Project structure](#project-structure)
+13. [Design decisions](#design-decisions)
+14. [Glossary](#glossary)
+15. [License](#license)
 
 ---
 
@@ -376,25 +375,6 @@ them against the final rule before relying on the figures.
 
 ---
 
-## Limitations
-
-- **Estimates, not compliance determinations.** Figures assume today's performance
-  continues; owners can improve, use alternative pathways, get extensions, or appeal.
-- **Affordable housing cannot be identified** in the data, so apartment estimates may
-  be high ($2.50/sf penalty and a possible extension would apply).
-- **Not modeled:** campus or portfolio compliance, end-use deductions, state target
-  adjustments for operating hours, and the state's alternative compliance pathways.
-- **No ground truth for "who to contact first".** The ranking is a transparent,
-  tested judgment, not a learned prediction.
-- **Not yet validated over time.** The peer model is tested across buildings, not yet
-  on predicting which buildings will get worse in a later year.
-- **Not yet reviewed by practitioners.** Requirements come from the regulations and the
-  data, not from interviews with city staff or owners.
-- **Explanation checker blind spot.** A wrong number that happens to equal a different
-  true fact can pass (the remaining 1-4% of misses).
-
----
-
 ## Plan and status
 
 | Stage | What it delivers | Status |
@@ -406,13 +386,6 @@ them against the final rule before relying on the figures.
 | 5. Prioritization | Ranked action list and likely pathway | Done |
 | 6. Explanations | Checked plain-language summary per building | Done (template) |
 | 7. Web app | List, map, building detail; tested locally | Done |
-| 8. Public release | GitHub repository and hosted app | Next |
-| 9. LLM explanations | Natural-language summaries through the same checker, with measured pass rate and cost | Planned |
-| 10. Practitioner feedback | Interviews with city staff, a property manager, an energy consultant; one usability test | Planned |
-| 11. Validation over time | Train on earlier years, check which buildings later got worse | Planned |
-| 12. Checker upgrade | Tie each number to its meaning (a "%" near "gas" must be the gas share) | Planned |
-| 13. Second city | Apply the pipeline to New York City's benchmarking data | Planned |
-| 14. Final rule check | Re-verify mapping and payment formula against the final Director's Rule | Planned |
 
 ---
 
